@@ -1,8 +1,11 @@
 package com.dmitrij.javaenterprise.todo.security;
 
 public enum ApplicationUserPermission {
-    USER_READ("student:read"),
-    USER_WRITE("student:write");
+/**
+    USER_READ("user:read"),
+    USER_WRITE("user:write"),
+    ITEM_READ("item:read"),
+    ITEM_WRITE("item:write");
 
     private final String permission;
 
@@ -14,4 +17,6 @@ public enum ApplicationUserPermission {
     public String getPermission() {
         return permission;
     }
+ **/
+
 }

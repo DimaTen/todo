@@ -2,7 +2,7 @@ package com.dmitrij.javaenterprise.todo.controller;
 
 import com.dmitrij.javaenterprise.todo.model.item.TodoItem;
 import com.dmitrij.javaenterprise.todo.model.item.TodoItemNotFoundException;
-import com.dmitrij.javaenterprise.todo.model.item.TodoItemRepository;
+import com.dmitrij.javaenterprise.todo.repository.TodoItemRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

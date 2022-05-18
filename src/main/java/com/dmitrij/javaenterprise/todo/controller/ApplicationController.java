@@ -26,4 +26,9 @@ public class ApplicationController {
         model.addAttribute("user", user);
         return "registration";
     }
+
+    @RequestMapping("/adminView")
+    public String showAllUsers() {
+        return "adminView";
+    }
 }

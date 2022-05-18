@@ -6,36 +6,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Template • TodoMVC</title>
+
     <link rel="stylesheet" th:href="@{/webjars/todomvc-common/base.css}">
     <link rel="stylesheet" th:href="@{/webjars/todomvc-app-css/index.css}">
+
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed"
-                    data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-                    aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span> <span
-                    class="icon-bar"></span> <span class="icon-bar"></span> <span
-                    class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#" th:href="@{/}">Registration and
-                Login Module</a>
+
         </div>
 
     </div>
 </nav>
 <div class="container">
 
-    <p>
-        Welcome <span sec:authentication="principal.username">User</span>
-    </p>
+
 </div>
 
 <section class="todoapp">
+
     <header class="header">
-        <h1 style="color: black">ToDo</h1>
+        <div>
+            <img th:src="@{/images/todo.png}" width="550" height="300" alt=""/>
+        </div>
+
         <form th:action="@{/}" method="post" th:object="${item}">
             <label>
                 <input class="new-todo" placeholder="What needs to be done?" autofocus
@@ -85,17 +81,15 @@
         </form>
     </footer>
 </section>
-<footer class="info">
-    <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-            <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
-        </ul>
-    </div>
-    <form th:action="@{/logout}" method="post">
+
+<footer class="footer">
+    <form th:action="@{/logout}" method="post" >
         <p>
-            <input type="submit" value="Logout" class="btn btn-primary" />
+            <input type="submit" value="Logout" class="btn btn-primary" th:bgcolor="Blue" />
         </p>
     </form>
+
+
 
 </footer>
 <!-- Scripts here. Don't remove ↓ -->

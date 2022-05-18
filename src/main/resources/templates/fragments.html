@@ -1,7 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       lang="en">
-<!--/*@thymesVar id="item" type="com.wimdeblauwe.examples.todomvcthymeleaf.todoitem.web.TodoItemController.TodoItemDto"*/-->
 <li th:fragment="todoItem(item)" th:classappend="${item.completed?'completed':''}">
     <div class="view">
         <form th:action="@{/{id}/toggle(id=${item.id})}" th:method="put">
